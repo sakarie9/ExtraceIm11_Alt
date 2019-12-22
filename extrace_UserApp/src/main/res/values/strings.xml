@@ -202,4 +202,10 @@
      <string name="no">否</string>
      <string name="geofence_des">点击地图，以点击点为中心建立地理围栏，再次点击地图修改地理围栏位置</string>
 
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="password_again">Input your password again</string>
+    <string name="register">Register</string>
+
 </resources>

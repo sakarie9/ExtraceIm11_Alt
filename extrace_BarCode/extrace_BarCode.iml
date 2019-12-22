@@ -90,6 +90,6 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: __local_aars__:E.\AndroidStudioProjects\Extrace_UserApp_Alt\extrace_BarCode\libs\zxing.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:D.\CodeLibrary\AndroidStudioProjects\ExtraceIm11_Alt\extrace_BarCode\libs\zxing.jar:unspecified@jar" level="project" />
   </component>
 </module>

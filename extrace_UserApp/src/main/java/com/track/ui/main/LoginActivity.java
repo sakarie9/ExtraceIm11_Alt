@@ -11,7 +11,10 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -29,7 +32,7 @@ import com.track.util.Utility;
 /**
  * 登陆活动
  */
-public class LoginActivity extends FragmentActivity {
+public class LoginActivity extends AppCompatActivity {
 	// 进度对话框模块
 	private ProgressDialog prgDialog;
 	private TextView errorMsg;
@@ -43,6 +46,8 @@ public class LoginActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
+		this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		/*
 		mImageViewBack = (ImageView) findViewById(R.id.id_iv_back);
 		mImageViewBack.setOnClickListener(new OnClickListener() {
 			@Override
@@ -53,6 +58,7 @@ public class LoginActivity extends FragmentActivity {
 				startActivity(loginIntent);
 			}
 		});
+		*/
 
 		errorMsg = (TextView) findViewById(R.id.login_error);
 		unameET = (EditText) findViewById(R.id.loginUsername);
@@ -190,4 +196,20 @@ public class LoginActivity extends FragmentActivity {
 		startActivity(loginIntent);
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case android.R.id.home:
+				/*
+				Intent loginIntent = new Intent(getApplicationContext(),
+						MainActivity.class);
+				loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(loginIntent);
+				*/
+				finish();
+				return true;
+				default:
+					return super.onOptionsItemSelected(item);
+		}
+	}
 }
