@@ -1,0 +1,2 @@
+include ':extrace_BarCode'
+include ':extrace_UserApp'

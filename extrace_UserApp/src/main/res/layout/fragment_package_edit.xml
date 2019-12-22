@@ -1,0 +1,388 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.track.ui.domain.PackageEditActivity$PackageEditFragment1" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="8dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="包裹:"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/packageId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dip" />
+
+            <ImageView
+                android:id="@+id/action_pk_capture_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search_express" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="8dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="出发地:"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/pkgsourcenode"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dip" />
+
+            <ImageView
+                android:id="@+id/action_psource_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/location_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="8dip"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="区域码:"
+                android:textColor="@color/black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/packageSouce1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="13dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="8dip"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="电话:"
+                android:textColor="@color/black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/packageSouce2"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="13dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="8dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="目的地:"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/pkgTargetnode"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dip" />
+
+            <ImageView
+                android:id="@+id/action_ptarget_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/location_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="8dip"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="区域码:"
+                android:textColor="@color/black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/packageTarget1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="13dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="8dip"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="电话:"
+                android:textColor="@color/black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/packageTarget2"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="13dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="8dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="打包时间:"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/packageCreateTime"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="8dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="包裹状态:"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/packageStatus"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/button_add_es"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add_express" />
+
+                <TextView
+                    android:id="@+id/tv_add_es"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加运单" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/button_queryEsInPkg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/select_express" />
+
+                <TextView
+                    android:id="@+id/tv_query_es"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="已有运单" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:paddingRight="20dp" >
+
+                <ImageView
+                    android:id="@+id/button_packOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pack_ok" />
+
+                <TextView
+                    android:id="@+id/tv_packOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="确认打包" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

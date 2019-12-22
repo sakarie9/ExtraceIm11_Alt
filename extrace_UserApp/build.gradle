@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.track.app.user"
+        minSdkVersion 15
+        targetSdkVersion 28
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':extrace_BarCode')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation files('libs/AMap_3DMap_V2.4.0.jar')
+    implementation files('libs/AMap_Services_V2.4.0.jar')
+    implementation files('libs/android-async-http-1.4.6.jar')
+    implementation files('libs/Android_Location_V1.3.2.jar')
+}
