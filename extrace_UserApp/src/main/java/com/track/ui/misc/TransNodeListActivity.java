@@ -122,7 +122,7 @@ public class TransNodeListActivity extends AppCompatActivity {
 
 		private void RefreshList(String code) {
 			this.getActivity().setTitle("");
-			if (code.length() > 6) {
+			if (code.length() >= 6) {
 
 				try {
 					mNodeLoader = new TransNodeListLoader(mNodeAdapter,
@@ -136,7 +136,7 @@ public class TransNodeListActivity extends AppCompatActivity {
 				try {
 					mNodeLoader = new TransNodeListLoader(mNodeAdapter,
 							this.getActivity());
-					mNodeLoader.LoadTransNodeListByCode(code);
+					mNodeLoader.LoadTransNodeListByName(code);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

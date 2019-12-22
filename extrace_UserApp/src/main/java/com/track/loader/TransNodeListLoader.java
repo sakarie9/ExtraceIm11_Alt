@@ -91,6 +91,7 @@ public class TransNodeListLoader extends HttpAsyncTask {
 		url += "getNodebyId/" + id + "?_type=json";
 		try {
 			execute(url, "GET");
+			Log.d("getNodebyId", "LoadTransNodeListById: "+url);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
