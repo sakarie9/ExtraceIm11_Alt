@@ -84,9 +84,9 @@ public class PackageReceiveFragment extends Fragment implements
 		mLoader = new PackageLoader(this, this.getActivity());
 		SharedPreferences sp = getActivity().getSharedPreferences("userInfo", Activity.MODE_PRIVATE);
 		int role = sp.getInt("role", -1);
-		if(role == 1){
+		if(role == 2){
 			mLoader.receivePackage(mEditText.getText().toString());
-		}else if(role == 2){
+		}else if(role == 1){
 			mLoader.receive2Package(mEditText.getText().toString());
 		}
 
