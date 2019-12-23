@@ -144,7 +144,7 @@ public class PackageLoader extends HttpAsyncTask {
 		int uid = ((ExTraceApplication) context.getApplication())
 				.getLoginUser().getId();
 		url += "UnpackExpressList/PackageId/" + pKgId + "/uid/" + uid + "?_type=json";
-		Log.d("UnpackExpressList", "UnpackExpressList: "+url);
+		//Log.d("UnpackExpressList", "UnpackExpressList: "+url);
 		try {
 			execute(url, "GET");
 		} catch (Exception e) {
