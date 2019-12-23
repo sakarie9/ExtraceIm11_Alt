@@ -2,6 +2,7 @@ package com.track.ui.main;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -81,7 +82,14 @@ public class PackageReceiveFragment extends Fragment implements
 
 	protected void receivePackage() {
 		mLoader = new PackageLoader(this, this.getActivity());
-		mLoader.receivePackage(mEditText.getText().toString());
+		SharedPreferences sp = getActivity().getSharedPreferences("userInfo", Activity.MODE_PRIVATE);
+		int role = sp.getInt("role", -1);
+		if(role == 1){
+			mLoader.receivePackage(mEditText.getText().toString());
+		}else if(role == 2){
+			mLoader.receive2Package(mEditText.getText().toString());
+		}
+
 	}
 
 	@Override

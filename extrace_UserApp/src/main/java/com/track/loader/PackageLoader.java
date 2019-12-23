@@ -127,14 +127,24 @@ public class PackageLoader extends HttpAsyncTask {
 			e.printStackTrace();
 		}
 	}
+	public void receive2Package(String pid) {
+		int uid = ((ExTraceApplication) context.getApplication())
+				.getLoginUser().getId();
+		url += "receive2PackagByUid/pid/" + pid + "/uid/" + uid + "?_type=json";
+		try {
+			execute(url, "GET");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	// 拆包，将包内快件状态改为“分拣”,并放入转运包裹？
 
 	public void UnpackExpressList(String pKgId) {
 		int uid = ((ExTraceApplication) context.getApplication())
 				.getLoginUser().getId();
-		url += "UnpackExpressList/PackageId/" + pKgId + "/uid/" + uid
-				+ "?_type=json";
+		url += "UnpackExpressList/PackageId/" + pKgId + "/uid/" + uid + "?_type=json";
+		Log.d("UnpackExpressList", "UnpackExpressList: "+url);
 		try {
 			execute(url, "GET");
 		} catch (Exception e) {

@@ -128,5 +128,6 @@
     <orderEntry type="library" name="Gradle: android.arch.core:runtime:1.1.1@aar" level="project" />
     <orderEntry type="module" module-name="extrace_BarCode" />
     <orderEntry type="library" name="Gradle: org.apache.http.legacy-android-28" level="project" />
+    <orderEntry type="module" module-name="extrace_BarCode" />
   </component>
 </module>

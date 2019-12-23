@@ -19,6 +19,8 @@ import com.track.misc.model.ExpressSheet;
 import com.track.ui.adapter.ExpressListAdapter;
 import com.track.util.ExTraceApplication;
 
+import static android.content.ContentValues.TAG;
+
 public class ExpressListFragment extends ListFragment {
 
 	private static final String ARG_EX_TYPE = "ExType";
@@ -121,10 +123,12 @@ public class ExpressListFragment extends ListFragment {
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
 
 		selectItem = mAdapter.getItem(info.position);
+		Log.d(TAG, "onCreateContextMenu: jawpofjawpfwaf");
 		if (selectItem.getStatus() == ExpressSheet.STATUS.STATUS_PARTATION) {
 			selectPosition = info.position;
 			menu.setHeaderTitle("运单: " + selectItem.getId());
 			menu.add(info.position, 1, 0, "放入包裹");
+			Log.d(TAG, "onCreateContextMenu: aaaaaaaaaaaaa");
 		}
 	}
 
