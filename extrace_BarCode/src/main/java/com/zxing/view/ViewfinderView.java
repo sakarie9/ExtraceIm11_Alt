@@ -229,8 +229,8 @@ public final class ViewfinderView extends View {
 		}
 
 		// 获取屏幕的宽和高
-		int width = canvas.getWidth();
-		int height = canvas.getHeight();
+		int width = getWidth();
+		int height = getHeight();
 
 		paint.setColor(resultBitmap != null ? resultColor : maskColor);
 

@@ -123,7 +123,8 @@ final class CameraConfigurationManager {
   private static Point findBestPreviewSizeValue(CharSequence previewSizeValueString, Point screenResolution) {
     int bestX = 0;
     int bestY = 0;
-    int diff = Integer.MAX_VALUE;
+    //int diff = Integer.MAX_VALUE;
+    float diff = Float.MAX_VALUE;
     for (String previewSize : COMMA_PATTERN.split(previewSizeValueString)) {
 
       previewSize = previewSize.trim();
@@ -143,7 +144,8 @@ final class CameraConfigurationManager {
         continue;
       }
 
-      int newDiff = Math.abs(newX - screenResolution.x) + Math.abs(newY - screenResolution.y);
+      //int newDiff = Math.abs(newX - screenResolution.x) + Math.abs(newY - screenResolution.y);
+      float newDiff = Math.abs(screenResolution.x * 1.0f / newY - screenResolution.y * 1.0f / newX);
       if (newDiff == 0) {
         bestX = newX;
         bestY = newY;
