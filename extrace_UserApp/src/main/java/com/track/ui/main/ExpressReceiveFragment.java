@@ -1,6 +1,6 @@
 package com.track.ui.main;
 
-import android.app.AlertDialog;
+import android.support.v7.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -60,13 +60,10 @@ public class ExpressReceiveFragment extends Fragment {
 					// 通过AlertDialog.Builder这个类来实例化我们的一个AlertDialog的对象
 					AlertDialog.Builder builder = new AlertDialog.Builder(
 							getActivity());
-					// 设置Title的图标
-					builder.setIcon(R.drawable.ic_launcher);
 					// 设置Title的内容
-					builder.setTitle("此操作将会新建运单：");
+					builder.setTitle("此操作将会新建运单");
 					// 设置Content来显示一个信息
-					builder.setMessage("确定新建运单:\n" + mEditText.getText()
-							+ "\n吗？");
+					builder.setMessage("确定新建运单 " + mEditText.getText() + " 吗？");
 					// 设置一个PositiveButton
 					builder.setPositiveButton("确定",
 							new DialogInterface.OnClickListener() {
