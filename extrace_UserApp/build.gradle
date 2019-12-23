@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         debug {
-            storeFile file('..\\..\\Extrace_UserApp_Alt\\test.jks')
+            storeFile file(var)
             storePassword '114514'
             keyAlias = '810'
             keyPassword '114514'
