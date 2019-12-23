@@ -18,14 +18,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/face_login" />
+            android:layout_weight="2"
+            android:src="@drawable/avatar" />
 
         <TextView
             android:id="@+id/id_bt_login"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_weight="1"
             android:clickable="true"
+            android:gravity="center"
             android:text="请登录"
             android:textColor="@color/white"
             android:textSize="20sp" />
