@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -25,7 +27,7 @@ import com.track.util.Utility;
  * 
  * 注册活动
  */
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends AppCompatActivity {
 	private ProgressDialog prgDialog;
 	private TextView errorMsg;
 	private EditText nameET;
@@ -37,6 +39,8 @@ public class RegisterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		/*
 		mImageViewBack = (ImageView) findViewById(R.id.id_iv_back);
 		mImageViewBack.setOnClickListener(new OnClickListener() {
 
@@ -49,6 +53,8 @@ public class RegisterActivity extends Activity {
 				startActivity(loginIntent);
 			}
 		});
+		*/
+
 		errorMsg = (TextView) findViewById(R.id.register_error);
 		nameET = (EditText) findViewById(R.id.registerName);
 		pwdET = (EditText) findViewById(R.id.registerPassword);
@@ -239,4 +245,14 @@ public class RegisterActivity extends Activity {
 		pwdET.setText("");
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case android.R.id.home:
+				finish();
+				return true;
+				default: return super.onOptionsItemSelected(item);
+		}
+
+	}
 }

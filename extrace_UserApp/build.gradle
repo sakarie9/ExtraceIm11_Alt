@@ -30,6 +30,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.android.support:design:28.0.0'
     implementation files('libs/AMap_3DMap_V2.4.0.jar')
     implementation files('libs/AMap_Services_V2.4.0.jar')
     implementation files('libs/android-async-http-1.4.6.jar')
