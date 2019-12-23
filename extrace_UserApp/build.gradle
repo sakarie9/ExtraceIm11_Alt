@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('..\\..\\Extrace_UserApp_Alt\\test.jks')
+            storePassword '114514'
+            keyAlias = '810'
+            keyPassword '114514'
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
     aaptOptions.cruncherEnabled = false

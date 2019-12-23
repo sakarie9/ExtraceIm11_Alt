@@ -32,7 +32,7 @@
         <uses-library android:name="org.apache.http.legacy" android:required="false" />
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="ee2c789e1e427e1f0f089cec3d0fa2a9" />
+            android:value="96958075726536dfb550d4b29f1c32f2" />
 
         <activity
             android:name="com.track.ui.main.MainActivity"
