@@ -5,12 +5,12 @@
 
     <item android:id="@+id/action_refresh"  
           android:title="@string/action_refresh"  
-          android:icon="@drawable/ic_refresh"
+          android:icon="@drawable/ic_refresh_white_24dp"
           app:showAsAction="ifRoom" />
  	
  	<item android:id="@+id/action_map"  
           android:title="地图追踪"  
-	      android:icon="@drawable/map_trace"
+	      android:icon="@drawable/ic_map_white_24dp"
           app:showAsAction="ifRoom" />
 
 </menu>

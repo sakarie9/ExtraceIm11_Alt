@@ -54,7 +54,6 @@
                 android:gravity="center_horizontal"
                 android:text="修改资料"
                 android:textColor="@color/white"
-                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
