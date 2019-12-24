@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">物流管家</string>
+    <string name="app_name">卓越快递</string>
     <string name="menu_index">首页</string>
     <string name="menu_receive">快件揽收</string>
     <string name="menu_deliver">快件派送</string>
@@ -11,8 +11,8 @@
     <string name="menu_customermanage">客户管理</string>
     <string name="menu_about">关于</string>
     <string name="menu_receivepkg">接收包裹</string>
-    <string name="title_login">登录物流管家</string>
-    <string name="title_register">注册物流管家</string>
+    <string name="title_login">登录卓越快递</string>
+    <string name="title_register">注册卓越快递</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_search">搜索</string>
