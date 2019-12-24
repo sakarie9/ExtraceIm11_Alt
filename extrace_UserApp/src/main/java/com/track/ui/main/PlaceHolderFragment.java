@@ -95,7 +95,7 @@ public class PlaceHolderFragment extends Fragment {
 		mCenterTabFragment = new MyCenterTabFragment();
 
 		mFragments.add(mTransPackageTabFragment);
-		mFragments.add(mTransNodeTabFragment);
+		//mFragments.add(mTransNodeTabFragment);
 		mFragments.add(mCenterTabFragment);
 
 		mAdapter = new FragmentPagerAdapter(getChildFragmentManager()) {
@@ -113,6 +113,34 @@ public class PlaceHolderFragment extends Fragment {
 
 		mViewPager.setAdapter(mAdapter);
 
+//		mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
+//
+//			@Override
+//			public void onPageSelected(int position) {
+//
+//				// 每当其中一个fragment被选中时，其他文本恢复为黑色
+//				resetTextColor();
+//				resetImage();
+//				// 当fragment被选中时，分别设置文本标题颜色
+//				switch (position) {
+//				case 0:
+//					mPackageTextView.setTextColor(Color.parseColor("#87CEEB"));
+//					mPackageImageView
+//							.setImageResource(R.drawable.id_title_package_selected);
+//					break;
+//				case 1:
+//					mNodeTextView.setTextColor(Color.parseColor("#87CEEB"));
+//					mNodeImageView
+//							.setImageResource(R.drawable.id_title_node_selected);
+//					break;
+//				case 2:
+//					mCenterTextView.setTextColor(Color.parseColor("#87CEEB"));
+//					mCenterImageView
+//							.setImageResource(R.drawable.id_title_mycenter_selected);
+//					break;
+//				}
+//				mCurrentIndex = position;
+//			}
 		mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
 
 			@Override
@@ -123,21 +151,16 @@ public class PlaceHolderFragment extends Fragment {
 				resetImage();
 				// 当fragment被选中时，分别设置文本标题颜色
 				switch (position) {
-				case 0:
-					mPackageTextView.setTextColor(Color.parseColor("#87CEEB"));
-					mPackageImageView
-							.setImageResource(R.drawable.id_title_package_selected);
-					break;
-				case 1:
-					mNodeTextView.setTextColor(Color.parseColor("#87CEEB"));
-					mNodeImageView
-							.setImageResource(R.drawable.id_title_node_selected);
-					break;
-				case 2:
-					mCenterTextView.setTextColor(Color.parseColor("#87CEEB"));
-					mCenterImageView
-							.setImageResource(R.drawable.id_title_mycenter_selected);
-					break;
+					case 0:
+						mPackageTextView.setTextColor(Color.parseColor("#87CEEB"));
+						mPackageImageView
+								.setImageResource(R.drawable.id_title_package_selected);
+						break;
+					case 1:
+						mCenterTextView.setTextColor(Color.parseColor("#87CEEB"));
+						mCenterImageView
+								.setImageResource(R.drawable.id_title_mycenter_selected);
+						break;
 				}
 				mCurrentIndex = position;
 			}
